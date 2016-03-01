@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<icf_annotations version="1.0">
+  <tab name="Vector Table">
+    <item name=".intvec start" type="Number">
+      <symbol>__ICFEDIT_intvec_start__</symbol>
+      <tooltip>The vector table start address</tooltip>
+    </item>
+  </tab>
+
+  <tab name="Memory Regions">
+    <itemHeaders>
+      <header>Start:</header>
+      <header>End:</header>
+    </itemHeaders>
+    <item name="ROM" type="Range">
+      <symbol_1>__ICFEDIT_region_ROM_start__</symbol_1>
+      <symbol_2>__ICFEDIT_region_ROM_end__</symbol_2>
+      <tooltip_1>The start address of the ROM region</tooltip_1>
+      <tooltip_2>The end address of the ROM region</tooltip_2>
+    </item>
+    <item name="RAM" type="Range">
+      <symbol_1>__ICFEDIT_region_RAM_start__</symbol_1>
+      <symbol_2>__ICFEDIT_region_RAM_end__</symbol_2>
+      <tooltip_1>The start address of the RAM region</tooltip_1>
+      <tooltip_2>The end address of the RAM region</tooltip_2>
+    </item>
+  </tab>
+
+</icf_annotations>

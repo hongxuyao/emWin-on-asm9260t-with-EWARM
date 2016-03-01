@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\demo-with-RTOS\demo-with-RTOS.ewp</path>
+  </project>
+  <project>
+    <path>$WS_DIR$\sysloader-QSPI\sysloader-QSPI.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>all</name>
+      <member>
+        <project>sysloader-QSPI</project>
+        <configuration>Rel</configuration>
+      </member>
+      <member>
+        <project>demo-with-RTOS</project>
+        <configuration>Rel</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
+
+
