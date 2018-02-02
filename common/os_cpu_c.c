@@ -224,9 +224,10 @@ OS_STK *OSTaskStkInit (void (*task)(void *p_arg), void *p_arg, OS_STK *ptos, INT
   INT32U  task_addr;
   
   opt       = opt;                          /* 'opt' is not used, prevent warning                     */
-  stk       = ptos;                         /* Load stack pointer                                     */
+  stk       = ptos + 1;                     /* Load stack pointer                                     */
+  stk       = (OS_STK*)((OS_STK)stk & ~7u);
   task_addr = (INT32U)task & ~1;            /* Mask off lower bit in case task is thumb mode          */
-  *(stk)    = (INT32U)task_addr;            /* Entry Point                                            */
+  *(--stk)  = (INT32U)task_addr;            /* Entry Point                                            */
   *(--stk)  = (INT32U)OS_TaskReturn;        /* R14 (LR)                                               */
   stk      -= 12;                           /* R12 - R1                                               */
   *(--stk)  = (INT32U)p_arg;                /* R0 : argument                                          */
